@@ -3,6 +3,7 @@ import 'package:formu_val/src/blocs/provider.dart';
 import 'package:formu_val/src/pages/home_page.dart';
 import 'package:formu_val/src/pages/login_page.dart';
 import 'package:formu_val/src/pages/producto_page.dart';
+import 'package:formu_val/src/pages/registro_page.dart';
 
 
 void main() => runApp(MyApp());
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'home',
+        initialRoute: 'login',
         routes: {
           'login': (BuildContext context) => LoginPage(),
+          'registro': (BuildContext context) => RegistroPage(),
           'home': (BuildContext context) => HomePage(),
           'producto': (BuildContext context) => ProductoPage(),
           
