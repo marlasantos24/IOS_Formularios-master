@@ -8,8 +8,8 @@ import 'package:formu_val/src/preferencias_usuario/preferencias_usuario.dart';
 
 
 void main() async {
-  
-   final prefs = new PreferenciasUsuario();
+    WidgetsFlutterBinding.ensureInitialized();
+    final prefs = new PreferenciasUsuario();
     await prefs.initPrefs();
     
   runApp(MyApp());
@@ -18,6 +18,10 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final prefs = new PreferenciasUsuario();
+    print(prefs.token);
+
     return Provider(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

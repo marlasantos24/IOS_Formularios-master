@@ -26,7 +26,9 @@ class UsuarioProvider {
       print(decodeResp);
 
       if(decodeResp.containsKey('idToken')){
-        // TODO: salvar el token storage
+        
+        _prefs.token = decodeResp ['idToken'];
+
         return {'ok': true, 'token' : decodeResp ['idToken'] };
       }else{
         return {'ok': false, 'mensaje' : decodeResp['error']['message'] };
@@ -50,7 +52,9 @@ class UsuarioProvider {
       print(decodeResp);
 
       if(decodeResp.containsKey('idToken')){
-        // TODO: salvar el token storage
+        
+         _prefs.token = decodeResp ['idToken'];
+
         return {'ok': true, 'token' : decodeResp ['idToken'] };
       }else{
         return {'ok': false, 'mensaje' : decodeResp['error']['message'] };

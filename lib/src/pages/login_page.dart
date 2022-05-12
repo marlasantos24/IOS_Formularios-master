@@ -199,6 +199,6 @@ class LoginPage extends StatelessWidget {
     
     usuarioProvider.login(bloc.email, bloc.password);
 
-    //Navigator.pushReplacementNamed(context, 'home');
+    Navigator.pushReplacementNamed(context, 'home');
   }
 }
